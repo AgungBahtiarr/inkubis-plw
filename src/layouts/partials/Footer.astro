@@ -1,0 +1,45 @@
+---
+import Social from "@components/Social.astro";
+import config from "@config/config.json";
+import menu from "@config/menu.json";
+import social from "@config/social.json";
+import { markdownify } from "@lib/utils/textConverter";
+
+const { footer_content, copyright } = config.params;
+---
+
+<footer class="section bg-theme-light pb-0">
+  <div class="container">
+    {/* footer menu */}
+    <div class="row">
+      {
+        menu.footer.map((col) => {
+          return (
+            <div class="mb-12 sm:col-6 lg:col-3">
+              <h2 class="h4" set:html={markdownify(col.name)} />
+              <ul class="mt-6">
+                {col?.menu.map((item) => (
+                  <li class="mb-1">
+                    <a href={item.url} rel="">
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })
+      }
+      {/* social icons */}
+      <div class="md-12 sm:col-6 lg:col-3">
+        <h3>UPT Inkubis</h3>
+        <p class="mb-6 mt-3" set:html={markdownify(footer_content)} />
+        <Social source={social} className="social-icons mb-8" />
+      </div>
+    </div>
+    {/* copyright */}
+    <div class="border-t border-border py-6">
+      <p class="text-center text-sm" set:html={markdownify(copyright)} />
+    </div>
+  </div>
+</footer>

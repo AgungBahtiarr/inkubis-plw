@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Base from "@layouts/Base.astro";
+import { markdownify } from "@lib/utils/textConverter";
+import { getEntryBySlug } from "astro:content";
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner } = homepage.data;
+---
+
+<Base>
+  <!-- banner -->
+  <section class="section pb-[50px]">
+    <div class="container">
+      <div class="row text-center">
+        <div class="mx-auto lg:col-10">
+          <h1 class="font-primary font-bold">{banner?.title}</h1>
+          {
+            banner?.content && (
+              <p class="mt-4" set:html={markdownify(banner.content)} />
+            )
+          }
+
+          {
+            banner?.button?.enable && (
+              <a class="btn btn-primary mt-4" href={banner.button.link}>
+                {banner.button.label}
+              </a>
+            )
+          }
+
+          {
+            banner?.image && (
+              <Image
+                class="mx-auto mt-12"
+                src={banner?.image}
+                width={750}
+                height={390}
+                alt="banner image"
+              />
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

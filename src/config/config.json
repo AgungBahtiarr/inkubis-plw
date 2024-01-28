@@ -1,0 +1,34 @@
+{
+  "site": {
+    "title": "Inkubis-plw",
+    "base_url": "http://localhost:4321",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "",
+    "logo": "/images/logo.png",
+    "logo_width": "200",
+    "logo_height": "38",
+    "logo_text": "Astroplate"
+  },
+  "settings": {
+    "pagination": 4,
+    "summary_length": 200,
+    "blog_folder": "blog"
+  },
+  "nav_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": "/contact"
+  },
+  "params": {
+    "contact_form_action": "",
+    "tag_manager_id": "",
+    "footer_content": "Lorem ipsum dolor sit amet, consectetur elit. Consjat tristique eget amet, tempus eu at cttur.",
+    "copyright": "Designed and Developed By Agung Bahtiar"
+  },
+  "metadata": {
+    "meta_author": "Agung Bahtiar",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "astro boilerplate"
+  }
+}
