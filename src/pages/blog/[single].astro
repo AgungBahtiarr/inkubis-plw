@@ -4,6 +4,8 @@ import PostSingle from "@layouts/PostSingle.astro";
 import { getSinglePage } from "@lib/contentParser.astro";
 // import config from "@config/config.json";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   // const { blog_folder } = config.settings;
   const posts = await getSinglePage("blog");

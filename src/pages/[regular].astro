@@ -3,6 +3,8 @@ import Base from "@layouts/Base.astro";
 import Default from "@layouts/Default.astro";
 import { getSinglePage } from "@lib/contentParser.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const pages = await getSinglePage("pages");
 
