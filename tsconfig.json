@@ -1,6 +1,7 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  // "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "checkJs": false,
     "baseUrl": ".",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,

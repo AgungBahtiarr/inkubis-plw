@@ -3,9 +3,12 @@ import { Image } from "astro:assets";
 import Base from "@layouts/Base.astro";
 import { markdownify } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
+import agenda from "../assets/agenda.png?url";
 
 const homepage = await getEntryBySlug("homepage", "index");
 const { banner } = homepage.data;
+
+const gallery = await Astro.glob("../../public/images/gallery/*");
 ---
 
 <Base>
@@ -23,7 +26,10 @@ const { banner } = homepage.data;
 
           {
             banner?.button?.enable && (
-              <a class="btn btn-primary mt-4" href={banner.button.link}>
+              <a
+                class="btn btn-primary mt-4 py-[14px]"
+                href={banner.button.link}
+              >
                 {banner.button.label}
               </a>
             )
@@ -40,6 +46,142 @@ const { banner } = homepage.data;
               />
             )
           }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+
+  <section class="section pb-[50px]">
+    <div class="container">
+      <div class="row text-center">
+        <div class="mx-auto lg:col-10">
+          <h1 class="font-primary font-bold">Our Graduate Startups</h1>
+
+          <p class="mb-8 mt-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            alias quidem eius, sunt possimus ipsa placeat voluptate ut aliquid
+            voluptatem esse voluptates accusamus hic reprehenderit adipisci
+            magni laborum, fuga nisi?
+          </p>
+
+          <div class="flex items-center justify-center gap-8">
+            <div
+              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
+            >
+              <img
+                src="https://cdn.devdojo.com/tails/images/disney-plus.svg"
+                alt="Disney Plus"
+                class="block h-12 object-contain"
+              />
+            </div>
+            <div
+              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
+            >
+              <img
+                src="https://cdn.devdojo.com/tails/images/google.svg"
+                alt="Google"
+                class="block h-9 object-contain"
+              />
+            </div>
+            <div
+              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
+            >
+              <img
+                src="https://cdn.devdojo.com/tails/images/hubspot.svg"
+                alt="Hubspot"
+                class="block h-9 object-contain"
+              />
+            </div>
+            <div
+              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
+            >
+              <img
+                src="https://cdn.devdojo.com/tails/images/youtube.svg"
+                alt="Youtube"
+                class="block h-7 object-contain lg:h-8"
+              />
+            </div>
+            <div
+              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-6 xl:col-span-2"
+            >
+              <img
+                src="https://cdn.devdojo.com/tails/images/slack.svg"
+                alt="Slack"
+                class="block h-9 object-contain"
+              />
+            </div>
+            <div
+              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-6 xl:col-span-2"
+            >
+              <img
+                src="https://cdn.devdojo.com/tails/images/shopify.svg"
+                alt="Shopify"
+                class="block h-9 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agenda -->
+
+  <section class="section pb-[50px]">
+    <h1 class="text-center font-primary font-bold">Agenda</h1>
+    <div
+      class="mt-12 flex flex-col-reverse items-center justify-center gap-12 md:flex-row"
+    >
+      <Image src={agenda} alt="Service image" width={650} height="100" />
+      <div class="flex flex-col">
+        <p class="w-96">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed
+          possimus libero quos dolor iusto repellat, sint, numquam vero magnam,
+          sequi suscipit. Ipsum quod ex minus blanditiis dolor ab amet!
+        </p>
+        <a href="/agenda" class="btn btn-primary mt-4 py-[14px]">Learn more</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+
+  <section class="section pb-[50px]">
+    <div class="container">
+      <div class="row text-center">
+        <div class="mx-auto lg:col-10">
+          <h1 class="font-primary font-bold">Our Gallery</h1>
+          <p class="mb-2 mt-4">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+            alias quidem eius, sunt possimus ipsa placeat voluptate ut aliquid
+            voluptatem esse voluptates accusamus hic reprehenderit adipisci
+            magni laborum, fuga nisi?
+          </p>
+
+          <div class="section row pb-0">
+            <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+              {
+                gallery.slice(0, 4).map((image: any) => {
+                  return (
+                    <div>
+                      <img
+                        class="h-52 w-52 rounded-lg object-cover"
+                        src={image.default.src}
+                        alt="p"
+                      />
+                    </div>
+                  );
+                })
+              }
+            </div>
+            <div class="mt-5">
+              <a href="/gallery" class="btn btn-primary mt-4 py-[14px]"
+                >View More</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>

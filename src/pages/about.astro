@@ -1,28 +1,208 @@
 ---
 import Base from "@layouts/Base.astro";
+import { Image } from "astro:assets";
+import person from "../assets/person.jpg";
+
+import { Linkedin, Instagram, Twitter } from "lucide-astro";
 ---
 
 <Base>
-  <section class="section">
-    <div class="container flex flex-col flex-wrap">
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
-      <h1>hello</h1>
+  <section class="section mx-8">
+    <div class="font-normal">
+      <h1 class="text-center">About Us</h1>
+      <div class="mx-auto flex justify-center">
+        <p class="mt-4 w-[800px] text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
+          augue, non consequat lorem erat vel felis. Donec mollis eros nec
+          suscipit consectetur.
+        </p>
+      </div>
 
+      <div class="mt-8 flex justify-center gap-4">
+        <div class="max-w-md rounded-md bg-slate-100 p-4 md:p-8">
+          <h2 class="text-center">Visi</h2>
+          <p class="mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
+            augue, non consequat lorem erat vel felis.
+          </p>
+        </div>
+        <div class="max-w-md rounded-md bg-slate-100 p-4 md:p-8">
+          <h2 class="text-center">Misi</h2>
+          <p class="mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
+            augue, non consequat lorem erat vel felis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-8 my-12">
+    <div>
+      <h1 class="text-center">Our Teams</h1>
+      <div class="flex justify-center">
+        <p class="mb-5 mt-4 w-[800px] text-center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+          volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
+          augue, non consequat lorem erat vel felis. Donec mollis eros nec
+          suscipit consectetur.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-4 flex flex-row flex-wrap justify-center gap-6">
+      <!-- Card Item -->
+      <div
+        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
+      >
+        <div class="avatar">
+          <div class="w-24 rounded-full">
+            <Image src={person as any} alt="bu ayu" width={100} class="" />
+          </div>
+        </div>
+
+        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
+          Ayu Purwaningtysa s.hut.mm
+        </h3>
+        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
+
+        <div class="sosmed-icon mt-4 flex gap-2">
+          <a href="" class="border-2 p-2">
+            <Linkedin />
+          </a>
+          <a href="" class="border-2 p-2">
+            <Instagram />
+          </a>
+
+          <a href="" class="border-2 p-2">
+            <Twitter />
+          </a>
+        </div>
+      </div>
+      <!-- Card item end -->
+
+      <!-- Card Item -->
+      <div
+        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
+      >
+        <div class="avatar">
+          <div class="w-24 rounded-full">
+            <Image src={person as any} alt="bu ayu" width={100} class="" />
+          </div>
+        </div>
+
+        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
+          Ayu Purwaningtysa s.hut.mm
+        </h3>
+        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
+
+        <div class="sosmed-icon mt-4 flex gap-2">
+          <a href="" class="border-2 p-2">
+            <Linkedin />
+          </a>
+          <a href="" class="border-2 p-2">
+            <Instagram />
+          </a>
+
+          <a href="" class="border-2 p-2">
+            <Twitter />
+          </a>
+        </div>
+      </div>
+      <!-- Card item end -->
+
+      <!-- Card Item -->
+      <div
+        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
+      >
+        <div class="avatar">
+          <div class="w-24 rounded-full">
+            <Image src={person as any} alt="bu ayu" width={100} class="" />
+          </div>
+        </div>
+
+        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
+          Ayu Purwaningtysa s.hut.mm
+        </h3>
+        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
+
+        <div class="sosmed-icon mt-4 flex gap-2">
+          <a href="" class="border-2 p-2">
+            <Linkedin />
+          </a>
+          <a href="" class="border-2 p-2">
+            <Instagram />
+          </a>
+
+          <a href="" class="border-2 p-2">
+            <Twitter />
+          </a>
+        </div>
+      </div>
+      <!-- Card item end -->
+
+      <!-- Card Item -->
+      <div
+        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
+      >
+        <div class="avatar">
+          <div class="w-24 rounded-full">
+            <Image src={person as any} alt="bu ayu" width={100} class="" />
+          </div>
+        </div>
+
+        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
+          Ayu Purwaningtysa s.hut.mm
+        </h3>
+        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
+
+        <div class="sosmed-icon mt-4 flex gap-2">
+          <a href="" class="border-2 p-2">
+            <Linkedin />
+          </a>
+          <a href="" class="border-2 p-2">
+            <Instagram />
+          </a>
+
+          <a href="" class="border-2 p-2">
+            <Twitter />
+          </a>
+        </div>
+      </div>
+      <!-- Card item end -->
+
+      <!-- Card Item -->
+      <div
+        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
+      >
+        <div class="avatar">
+          <div class="w-24 rounded-full">
+            <Image src={person as any} alt="bu ayu" width={100} class="" />
+          </div>
+        </div>
+
+        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
+          Ayu Purwaningtysa s.hut.mm
+        </h3>
+        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
+
+        <div class="sosmed-icon mt-4 flex gap-2">
+          <a href="" class="border-2 p-2">
+            <Linkedin />
+          </a>
+          <a href="" class="border-2 p-2">
+            <Instagram />
+          </a>
+
+          <a href="" class="border-2 p-2">
+            <Twitter />
+          </a>
+        </div>
+      </div>
+      <!-- Card item end -->
     </div>
   </section>
 </Base>
