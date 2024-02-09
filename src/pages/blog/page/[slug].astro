@@ -8,6 +8,7 @@ import { markdownify } from "@lib/utils/textConverter";
 import Post from "@partials/Post.astro";
 import { getEntryBySlug } from "astro:content";
 // const { blog_folder } = config.settings;
+export const prerender = true;
 
 export async function getStaticPaths() {
   const posts = await getSinglePage(config.settings.blog_folder);
