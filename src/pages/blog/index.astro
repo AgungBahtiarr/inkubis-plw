@@ -53,7 +53,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
               set:html={plainify(currentPosts[0].body.slice(0, summary_length))}
             />
             <a
-              class="btn btn-primary mt-4"
+              class="btn btn-primary mt-4 py-[14px]"
               href={`/${blog_folder}/${currentPosts[0].slug}`}
               rel=""
             >
