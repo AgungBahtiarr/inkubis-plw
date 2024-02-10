@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+
+export const prerender = true;
+
+import { Linkedin, Instagram, Twitter } from "lucide-astro";
+
+const { name, image, position, linkLinkedIn, linkInstagram, linkTwitter } =
+  Astro.props;
+---
+
+<!-- Card Item -->
+<div
+  class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
+>
+  <Image
+    src={image}
+    alt={name + "photos"}
+    width={1000}
+    height={1000}
+    class="h-24 w-24 rounded-full object-cover"
+  />
+
+  <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
+    {name}
+  </h3>
+  <h4 class="mt-2 text-center text-xl font-semibold">{position}</h4>
+
+  <div class="sosmed-icon mt-4 flex gap-2">
+    <a href={linkLinkedIn} class="border-2 p-2">
+      <Linkedin />
+    </a>
+
+    <a href={linkInstagram} class="border-2 p-2">
+      <Instagram />
+    </a>
+
+    <a href={linkTwitter} class="border-2 p-2">
+      <Twitter />
+    </a>
+  </div>
+</div>
+<!-- Card item end -->

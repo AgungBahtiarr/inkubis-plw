@@ -1,11 +1,12 @@
 ---
 import Base from "@layouts/Base.astro";
-import { Image } from "astro:assets";
-import person from "../assets/person.jpg";
+import { getEntryBySlug } from "astro:content";
 
 export const prerender = true;
+import ProfileCard from "../layouts/components/ProfileCard.astro";
 
-import { Linkedin, Instagram, Twitter } from "lucide-astro";
+const entry = await getEntryBySlug("about", "index");
+const { teams } = entry.data;
 ---
 
 <Base>
@@ -56,155 +57,20 @@ import { Linkedin, Instagram, Twitter } from "lucide-astro";
     </div>
 
     <div class="mt-4 flex flex-row flex-wrap justify-center gap-6">
-      <!-- Card Item -->
-      <div
-        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
-      >
-        <div class="avatar">
-          <div class="w-24 rounded-full">
-            <Image src={person as any} alt="bu ayu" width={100} class="" />
-          </div>
-        </div>
-
-        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
-          Ayu Purwaningtysa s.hut.mm
-        </h3>
-        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
-
-        <div class="sosmed-icon mt-4 flex gap-2">
-          <a href="" class="border-2 p-2">
-            <Linkedin />
-          </a>
-          <a href="" class="border-2 p-2">
-            <Instagram />
-          </a>
-
-          <a href="" class="border-2 p-2">
-            <Twitter />
-          </a>
-        </div>
-      </div>
-      <!-- Card item end -->
-
-      <!-- Card Item -->
-      <div
-        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
-      >
-        <div class="avatar">
-          <div class="w-24 rounded-full">
-            <Image src={person as any} alt="bu ayu" width={100} class="" />
-          </div>
-        </div>
-
-        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
-          Ayu Purwaningtysa s.hut.mm
-        </h3>
-        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
-
-        <div class="sosmed-icon mt-4 flex gap-2">
-          <a href="" class="border-2 p-2">
-            <Linkedin />
-          </a>
-          <a href="" class="border-2 p-2">
-            <Instagram />
-          </a>
-
-          <a href="" class="border-2 p-2">
-            <Twitter />
-          </a>
-        </div>
-      </div>
-      <!-- Card item end -->
-
-      <!-- Card Item -->
-      <div
-        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
-      >
-        <div class="avatar">
-          <div class="w-24 rounded-full">
-            <Image src={person as any} alt="bu ayu" width={100} class="" />
-          </div>
-        </div>
-
-        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
-          Ayu Purwaningtysa s.hut.mm
-        </h3>
-        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
-
-        <div class="sosmed-icon mt-4 flex gap-2">
-          <a href="" class="border-2 p-2">
-            <Linkedin />
-          </a>
-          <a href="" class="border-2 p-2">
-            <Instagram />
-          </a>
-
-          <a href="" class="border-2 p-2">
-            <Twitter />
-          </a>
-        </div>
-      </div>
-      <!-- Card item end -->
-
-      <!-- Card Item -->
-      <div
-        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
-      >
-        <div class="avatar">
-          <div class="w-24 rounded-full">
-            <Image src={person as any} alt="bu ayu" width={100} class="" />
-          </div>
-        </div>
-
-        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
-          Ayu Purwaningtysa s.hut.mm
-        </h3>
-        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
-
-        <div class="sosmed-icon mt-4 flex gap-2">
-          <a href="" class="border-2 p-2">
-            <Linkedin />
-          </a>
-          <a href="" class="border-2 p-2">
-            <Instagram />
-          </a>
-
-          <a href="" class="border-2 p-2">
-            <Twitter />
-          </a>
-        </div>
-      </div>
-      <!-- Card item end -->
-
-      <!-- Card Item -->
-      <div
-        class="mycard flex flex-col items-center justify-center rounded-md border-2 p-4"
-      >
-        <div class="avatar">
-          <div class="w-24 rounded-full">
-            <Image src={person as any} alt="bu ayu" width={100} class="" />
-          </div>
-        </div>
-
-        <h3 class="mt-4 w-44 border-b-2 text-center text-xl font-normal">
-          Ayu Purwaningtysa s.hut.mm
-        </h3>
-        <h4 class="mt-2 text-center text-xl font-semibold">Ketua</h4>
-
-        <div class="sosmed-icon mt-4 flex gap-2">
-          <a href="" class="border-2 p-2">
-            <Linkedin />
-          </a>
-          <a href="" class="border-2 p-2">
-            <Instagram />
-          </a>
-
-          <a href="" class="border-2 p-2">
-            <Twitter />
-          </a>
-        </div>
-      </div>
-      <!-- Card item end -->
+      {
+        teams.map((item: any) => {
+          return (
+            <ProfileCard
+              image={item.profile.images}
+              name={item.profile.name}
+              position={item.profile.position}
+              linkLinkedIn={item.profile.linkLinkedIn}
+              linkInstagram={item.profile.linkInstagram}
+              linkTwitter={item.profile.linkTwitter}
+            />
+          );
+        })
+      }
     </div>
   </section>
 </Base>
