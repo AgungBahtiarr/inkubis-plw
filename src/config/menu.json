@@ -20,46 +20,5 @@
       "name": "About",
       "url": "/about"
     }
-  ],
-  "footer": [
-    {
-      "name": "Company",
-      "menu": [
-        {
-          "text": "Quick Start",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "name": "Product",
-      "menu": [
-        {
-          "text": "Features",
-          "url": "#"
-        },
-        {
-          "text": "Platform",
-          "url": "#"
-        }
-      ]
-    },
-    {
-      "name": "Support",
-      "menu": [
-        {
-          "text": "FAQ",
-          "url": "/faq"
-        },
-        {
-          "text": "Privacy Policy",
-          "url": "/privacy-policy"
-        },
-        {
-          "text": "Terms & Conditions",
-          "url": "/terms-conditions"
-        }
-      ]
-    }
   ]
 }

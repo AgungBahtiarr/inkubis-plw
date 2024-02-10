@@ -1,8 +1,9 @@
 ---
 import Social from "@components/Social.astro";
 import config from "@config/config.json";
-import menu from "@config/menu.json";
 import social from "@config/social.json";
+import { MapPin, Phone, Mail } from "lucide-astro";
+
 import { markdownify } from "@lib/utils/textConverter";
 
 const { footer_content, copyright } = config.params;
@@ -12,24 +13,57 @@ const { footer_content, copyright } = config.params;
   <div class="container">
     {/* footer menu */}
     <div class="row">
-      {
-        menu.footer.map((col) => {
-          return (
-            <div class="mb-12 sm:col-6 lg:col-3">
-              <h2 class="h4" set:html={markdownify(col.name)} />
-              <ul class="mt-6">
-                {col?.menu.map((item) => (
-                  <li class="mb-1">
-                    <a href={item.url} rel="">A
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          );
-        })
-      }
+      <div class="mb-12 sm:col-6 lg:col-3">
+        <h2 class="h4">Service</h2>
+        <ul class="mt-6">
+          <li class="mb-1">
+            <a href="" rel="">Lorem ipsum</a>
+          </li>
+          <li class="mb-1">
+            <a href="" rel="">Lorem ipsum</a>
+          </li>
+          <li class="mb-1">
+            <a href="" rel="">Lorem ipsum</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-12 sm:col-6 lg:col-3">
+        <h2 class="h4">Features</h2>
+        <ul class="mt-6">
+          <li class="mb-1">
+            <a href="/blog" rel="">Blog</a>
+          </li>
+          <li class="mb-1">
+            <a href="/gallery" rel="">Gallery</a>
+          </li>
+          <li class="mb-1">
+            <a href="/agenda" rel="">Agenda</a>
+          </li>
+          <li class="mb-1">
+            <a href="/about" rel="">About us</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-12 sm:col-6 lg:col-3">
+        <h2 class="h4">Contact</h2>
+        <ul class="mt-6 flex flex-col gap-2">
+          <li class="mb-1 flex gap-2">
+            <MapPin />
+            <a href="" rel="">Location</a>
+          </li>
+          <li class="mb-1 flex gap-2">
+            <Phone />
+            <a href="" rel="">Phone number</a>
+          </li>
+          <li class="mb-1 flex gap-2">
+            <Mail />
+            <a href="" rel="">Mail</a>
+          </li>
+        </ul>
+      </div>
+
       {/* social icons */}
       <div class="md-12 sm:col-6 lg:col-3">
         <h3>UPT Inkubis</h3>
