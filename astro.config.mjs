@@ -9,7 +9,6 @@ import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
 import vercel from "@astrojs/vercel/serverless";
 
-import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,7 +21,7 @@ export default defineConfig({
     }
   }), AutoImport({
     imports: ["@shortcodes/Button", "@shortcodes/Accordion", "@shortcodes/Notice", "@shortcodes/Video", "@shortcodes/Youtube"]
-  }), mdx(), alpinejs()],
+  }), mdx()],
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, {
       test: "Table of contents"

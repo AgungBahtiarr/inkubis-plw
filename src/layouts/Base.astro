@@ -27,6 +27,12 @@ const { title, meta_title, description, image, noindex, canonical } =
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
     <!-- favicon -->
     <link rel="shortcut icon" href={config.site.favicon} />
     <!-- theme meta -->
@@ -134,13 +140,6 @@ const { title, meta_title, description, image, noindex, canonical } =
       }`}
     />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- alpine -->
-    <style>
-      [x-cloak] {
-        display: none;
-      }
-    </style>
   </head>
   <body>
     <Header />

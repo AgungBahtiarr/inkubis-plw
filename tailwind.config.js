@@ -70,6 +70,6 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
-    require("daisyui"),
-  ],
+    // require("daisyui"),
+  ]
 };

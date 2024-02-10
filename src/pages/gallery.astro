@@ -1,14 +1,13 @@
 ---
 import Base from "@layouts/Base.astro";
-import { getEntryBySlug } from "astro:content";
-
-const entry = await getEntryBySlug("gallery", "index");
-
-const gallery = await Astro.glob("../../public/images/gallery/*");
-
+// import { getEntryBySlug } from "astro:content";
+// const entry = await getEntryBySlug("gallery", "index");
 // const { title, description, info } = entry?.data;
+// const { contents } = entry?.data;
+const gallery = await Astro.glob("../../public/images/gallery/*");
+export const prerender = true;
 
-const { contents } = entry?.data;
+
 ---
 
 <Base title="Gallery">
