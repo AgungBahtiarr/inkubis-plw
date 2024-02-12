@@ -5,7 +5,7 @@ backend:
 # publish_mode: editorial-workflow
 
 media_folder: "public/images"
-public_folder: "/public/images"
+public_folder: "/images"
 
 
 collections:
@@ -20,5 +20,5 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Darft", name: "draft", widget: "bool"}
+      - {label: "Draft", name: "draft", widget: "bool"}
       - {label: "Body", name: "body", widget: "markdown"}
