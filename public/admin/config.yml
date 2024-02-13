@@ -21,14 +21,4 @@ collections:
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Draft", name: "draft", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
-      
-  - name: "images"
-    label: "Gallery"
-    folder: “public/images/gallery”
-    create: true
-    media_folder: "public/images/gallery"
-    public_folder: "/images/gallery"
-    preview: true
-    fields:
-      - {label: “Images”,name: “images”,widget: “list”}
     

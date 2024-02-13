@@ -7,7 +7,6 @@ import { getSinglePage } from "@lib/contentParser.astro";
 export const prerender = true;
 
 export async function getStaticPaths() {
-  // const { blog_folder } = config.settings;
   const posts = await getSinglePage("blog");
 
   const paths = posts.map((post: any) => ({
