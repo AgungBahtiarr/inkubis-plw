@@ -24,7 +24,12 @@ import Base from "../layouts/Base.astro";
           class="mx-auto max-w-lg justify-center gap-12 lg:flex lg:max-w-none"
         >
           <div class="mt-12 flex-1 sm:max-w-lg lg:max-w-md">
-            <form class="name= space-y-5" contact" netlify">
+            <form
+              class="space-y-5"
+              name="contact"
+              method="post"
+              data-netlify="true"
+            >
               <div>
                 <label class="font-medium"> Full name</label>
                 <input
