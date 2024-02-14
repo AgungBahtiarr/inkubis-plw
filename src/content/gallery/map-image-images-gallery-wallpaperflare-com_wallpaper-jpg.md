@@ -1,3 +1,3 @@
 ---
-image: /images/gallery/wallpaperflare.com_wallpaper.jpg
+image: gallery/wallpaperflare.com_wallpaper.jpg
 ---
