@@ -35,3 +35,5 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "date"}
       - {label: "Image", name: "image", widget: "image"}
+      - {label: "Draft", name: "draft", widget: "boolean"}
+

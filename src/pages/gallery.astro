@@ -7,11 +7,12 @@ import Base from "@layouts/Base.astro";
 // const gallery = await Astro.glob("../../public/images/gallery/*");
 export const prerender = true;
 
+// const removeDrafts = removeIndex.filter((data: any) => !data.data.draft);
 const allImages = await Astro.glob("../content/gallery/*");
+const filteredImages = allImages.filter((data) => data.frontmatter.draft == false
+);
 
-allImages.map((image) => {
-  console.log(image.frontmatter.image);
-});
+console.log(filteredImages);
 ---
 
 <Base title="Gallery">
@@ -21,13 +22,17 @@ allImages.map((image) => {
       <div class="section row pb-0">
         <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
           {
-            allImages.map((image) => {
+            filteredImages.map((image) => {
               return (
                 <div>
                   <img
                     class="h-80 w-80 rounded-lg object-cover"
-                    src={image.frontmatter.image}
-                    alt="p"
+                    src={
+                      image.frontmatter.image
+                        ? image.frontmatter.image
+                        : "images"
+                    }
+                    alt={image.frontmatter.title}
                   />
                 </div>
               );
