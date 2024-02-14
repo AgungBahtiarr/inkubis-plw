@@ -4,7 +4,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import AutoImport from "astro-auto-import";
 import { defineConfig } from "astro/config";
-import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
 // import vercel from "@astrojs/vercel/serverless";
@@ -26,10 +25,6 @@ export default defineConfig({
     AutoImport({
       imports: [
         "@shortcodes/Button",
-        "@shortcodes/Accordion",
-        "@shortcodes/Notice",
-        "@shortcodes/Video",
-        "@shortcodes/Youtube",
       ],
     }),
     mdx(),
