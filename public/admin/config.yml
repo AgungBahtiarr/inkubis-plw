@@ -33,7 +33,7 @@ collections:
     media_folder: "/public/images/gallery"
     public_folder: "/images/gallery"
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Draft", name: "draft", widget: "boolean"}
 
