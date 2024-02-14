@@ -6,6 +6,7 @@ import AgendaItem from "../layouts/components/AgendaItem.astro";
 
 const entry = await getEntryBySlug("agenda", "index");
 const { content } = entry.data;
+export const prerender = true;
 ---
 
 <Base title="Agenda">

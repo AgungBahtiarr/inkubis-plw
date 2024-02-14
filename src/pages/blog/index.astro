@@ -16,6 +16,8 @@ const posts = await getSinglePage(blog_folder);
 const sortedPosts = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
+
+export const prerender = true;
 ---
 
 <Base title={postIndex?.data.title}>
