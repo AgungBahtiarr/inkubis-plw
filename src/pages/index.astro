@@ -37,8 +37,8 @@ export const prerender = true;
               <Image
                 class="mx-auto mt-12"
                 src={banner?.image}
-                width={750}
-                height={390}
+                width={1000}
+                height={1000}
                 alt="banner image"
               />
             )
@@ -75,10 +75,12 @@ export const prerender = true;
                 filteredImages.slice(0, 4).map((data: any) => {
                   return (
                     <div>
-                      <img
+                      <Image
                         class="h-52 w-52 rounded-lg object-cover"
                         src={data.frontmatter.image}
                         alt={data.frontmatter.title}
+                        width={1000}
+                        height={1000}
                       />
                     </div>
                   );
