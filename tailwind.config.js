@@ -1,4 +1,5 @@
 const theme = require("./src/config/theme.json");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 let font_base = Number(theme.fonts.font_size.base.replace("px", ""));
 let font_scale = Number(theme.fonts.font_size.scale);
@@ -62,7 +63,7 @@ module.exports = {
         h6: h6 + "rem",
       },
       fontFamily: {
-        primary: [fontPrimary, fontPrimaryType],
+        primary: ["Lato", ...defaultTheme.fontFamily.sans],
         secondary: [fontSecondary, fontSecondaryType],
       },
     },
@@ -71,5 +72,5 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
     // require("daisyui"),
-  ]
+  ],
 };

@@ -25,7 +25,7 @@ export const prerender = true;
     <div class="container">
       <div class="row text-center">
         <div class="mx-auto lg:col-10">
-          <h1 class="font-primary font-bold">{banner?.title}</h1>
+          <h1 class="font-primary font-semibold">{banner?.title}</h1>
           {
             banner?.content && (
               <p class="mt-4" set:html={markdownify(banner.content)} />
@@ -35,7 +35,7 @@ export const prerender = true;
           {
             banner?.image && (
               <Image
-                class="mx-auto mt-12"
+                class="mx-auto mt-12 w-[750px]"
                 src={banner?.image}
                 width={1000}
                 height={1000}
@@ -57,11 +57,11 @@ export const prerender = true;
   <Agenda />
   <!-- Gallery -->
 
-  <section class="section pb-[50px]">
+  <section class="section pb-24">
     <div class="container">
       <div class="row text-center">
         <div class="mx-auto lg:col-10">
-          <h1 class="font-primary font-bold">Our Gallery</h1>
+          <h1 class="font-semibold">Our Gallery</h1>
           <p class="mb-2 mt-4">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
             alias quidem eius, sunt possimus ipsa placeat voluptate ut aliquid

@@ -22,7 +22,7 @@ const currentPosts = sortedPosts.slice(0, config.settings.pagination);
   <section class="section">
     <div class="container">
       <h1
-        class="text-center font-normal lg:text-[56px]"
+        class="text-center font-semibold lg:text-[56px]"
         set:html={markdownify(postIndex?.data.title)}
       />
       <div class="row pb-12">
