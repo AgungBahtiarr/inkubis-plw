@@ -4,10 +4,14 @@ import Base from "@layouts/Base.astro";
 // const entry = await getEntryBySlug("gallery", "index");
 // const { title, description, info } = entry?.data;
 // const { contents } = entry?.data;
-const gallery = await Astro.glob("../../public/images/gallery/*");
+// const gallery = await Astro.glob("../../public/images/gallery/*");
 export const prerender = true;
 
+const allImages = await Astro.glob("../content/gallery/*");
 
+allImages.map((image) => {
+  console.log(image.frontmatter.image);
+});
 ---
 
 <Base title="Gallery">
@@ -17,12 +21,12 @@ export const prerender = true;
       <div class="section row pb-0">
         <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
           {
-            gallery.map((image: any) => {
+            allImages.map((image) => {
               return (
                 <div>
                   <img
                     class="h-80 w-80 rounded-lg object-cover"
-                    src={image.default.src}
+                    src={image.frontmatter.image}
                     alt="p"
                   />
                 </div>

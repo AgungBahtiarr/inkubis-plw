@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { z, defineCollection } from 'astro:content';
 
 // Homepage schema
 const homepage = defineCollection({
@@ -72,64 +72,71 @@ const pagesCollection = defineCollection({
   }),
 });
 
-//Contact collection schema
-const contact_page = defineCollection({
-  schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
-    draft: z.boolean().optional(),
-    info: z.object({
-      title: z.string().optional(),
-      description: z.string().optional(),
-      contacts: z.array(z.string()).optional()
-    }).optional()
-  })
-})
+// const galleryCollection = defineCollection({
+//   schema: z.object({
+//     title: z.string(),
+//     image: z.string().optional(),
+//   }),
+// })
 
-//faq page schema
-const faq_page = defineCollection({
-  schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
-    draft: z.boolean().optional(),
-    faqs: z.array(z.object({
-      title: z.string(),
-      answer: z.string(),
-    })).optional()
-  })
-})
+// //Contact collection schema
+// const contact_page = defineCollection({
+//   schema: z.object({
+//     title: z.string().optional(),
+//     description: z.string().optional(),
+//     draft: z.boolean().optional(),
+//     info: z.object({
+//       title: z.string().optional(),
+//       description: z.string().optional(),
+//       contacts: z.array(z.string()).optional()
+//     }).optional()
+//   })
+// })
 
-//pricing page schema
-const pricing_page = defineCollection({
-  schema: z.object({
-    title: z.string().optional(),
-    description: z.string().optional(),
-    draft: z.boolean().optional(),
-    plans: z.array(z.object({
-      title: z.string(),
-      subtitle: z.string(),
-      price: z.number(),
-      recommended: z.boolean().optional(),
-      type: z.string(),
-      features: z.array(z.string()).optional(),
-      button: z.object({
-        label: z.string(),
-        link: z.string().default("#"),
-        enable: z.boolean().default(true)
-      })
-    })).optional(),
-    call_to_action: z.object({
-      title: z.string().optional(),
-      content: z.string().optional(),
-      image: z.string(),
-      button: z.object({
-        label: z.string(),
-        link: z.string().default("#"),
-        enable: z.boolean().default(true)
-      }).optional()
-    }).optional()
-  })
-})
+// //faq page schema
+// const faq_page = defineCollection({
+//   schema: z.object({
+//     title: z.string().optional(),
+//     description: z.string().optional(),
+//     draft: z.boolean().optional(),
+//     faqs: z.array(z.object({
+//       title: z.string(),
+//       answer: z.string(),
+//     })).optional()
+//   })
+// })
+
+// //pricing page schema
+// const pricing_page = defineCollection({
+//   schema: z.object({
+//     title: z.string().optional(),
+//     description: z.string().optional(),
+//     draft: z.boolean().optional(),
+//     plans: z.array(z.object({
+//       title: z.string(),
+//       subtitle: z.string(),
+//       price: z.number(),
+//       recommended: z.boolean().optional(),
+//       type: z.string(),
+//       features: z.array(z.string()).optional(),
+//       button: z.object({
+//         label: z.string(),
+//         link: z.string().default("#"),
+//         enable: z.boolean().default(true)
+//       })
+//     })).optional(),
+//     call_to_action: z.object({
+//       title: z.string().optional(),
+//       content: z.string().optional(),
+//       image: z.string(),
+//       button: z.object({
+//         label: z.string(),
+//         link: z.string().default("#"),
+//         enable: z.boolean().default(true)
+//       }).optional()
+//     }).optional()
+//   })
+// })
 
 // Interface for content
 export interface PageData {

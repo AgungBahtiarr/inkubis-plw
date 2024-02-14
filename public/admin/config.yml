@@ -22,13 +22,13 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-
   - name: "image"
     label: "Gallery" # Used in the UI
-    folder: "public/images/gallery" # The path to the folder where the documents are stored
+    folder: "src/content/gallery" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    media_folder: "public/images/gallery"
+    media_library:
+      config:
+        multiple: true
     public_folder: "/images/gallery"
     fields: # The fields for each document, usually in front matter
       - {label: "Featured Image", name: "image", widget: "image"}
-
