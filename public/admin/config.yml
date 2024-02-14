@@ -29,6 +29,7 @@ collections:
     media_library:
       config:
         multiple: true
+    media_folder: "gallery"
     public_folder: "/images/gallery"
     fields: # The fields for each document, usually in front matter
       - {label: "Featured Image", name: "image", widget: "image"}
