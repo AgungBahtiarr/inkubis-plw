@@ -1,5 +1,5 @@
 ---
-title: 2022-07-04T05:00:00Z
+title: "gambar1"
 image: "/images/banner.jpg"
 draft: false
 ---
