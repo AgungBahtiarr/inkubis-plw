@@ -11,7 +11,7 @@ const { blog_folder, summary_length } = config.settings;
   {
     post.data.image && (
       <Image
-        class="rounded-lg"
+        class="h-[230px] w-[445px] rounded-lg object-cover "
         src={post.data.image}
         alt={post.data.title}
         width={index === 0 ? 925 : 445}
@@ -25,7 +25,11 @@ const { blog_folder, summary_length } = config.settings;
     </a>
   </h2>
   <p set:html={plainify(post.body.slice(0, summary_length))} />
-  <a class="btn btn-primary mt-4 py-[14px]" href={`/${blog_folder}/${post.slug}`} rel="">
+  <a
+    class="btn btn-primary mt-4 py-[14px]"
+    href={`/${blog_folder}/${post.slug}`}
+    rel=""
+  >
     Read More
   </a>
 </div>

@@ -1,29 +1,41 @@
 ---
 import Base from "../layouts/Base.astro";
+import { MapPin, Phone, Mail } from "lucide-astro";
 ---
 
-<Base>
+<Base title="Contact">
   <section class="section mx-8">
-    <div class="font-normal">
-      <h1 class="text-center font-semibold">Let us know how we can help</h1>
-      <div class="mx-auto flex justify-center">
-        <p class="mt-4 w-[800px] text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
-          augue, non consequat lorem erat vel felis. Donec mollis eros nec
-          suscipit consectetur.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="pb-14">
-      <div class="mx-auto max-w-screen-xl px-4 text-gray-600 md:px-8">
+    <div class="flex justify-center pb-14">
+      <div
+        class="flex max-w-screen-xl flex-col justify-center gap-6 px-4 text-gray-600 md:flex-row md:px-8"
+      >
+        <div>
+          <h1 class="max-w-md font-semibold">Let us know how we can help</h1>
+          <p class="max-w-md">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, at
+            nisi? Harum error est, eveniet ex provident nobis maiores, incidunt
+            aut unde deleniti dignissimos et aspernatur quam nulla expedita
+            fuga.
+          </p>
+          <div class="mt-5 flex flex-col gap-2">
+            <div class="flex gap-4">
+              <MapPin />
+              <p>Location</p>
+            </div>
+            <div class="flex gap-4">
+              <Phone />
+              <p>Location</p>
+            </div>
+            <div class="flex gap-4">
+              <Mail />
+              <p>Location</p>
+            </div>
+          </div>
+        </div>
         <div
-          class="mx-auto max-w-lg justify-center gap-12 lg:flex lg:max-w-none"
+          class="mt-6 max-w-lg gap-12 md:mt-0 lg:flex lg:max-w-none lg:justify-center"
         >
-          <div class="mt-12 flex-1 sm:max-w-lg lg:max-w-md">
+          <div class="max-w-lg lg:max-w-md">
             <form
               class="space-y-5"
               name="contact"

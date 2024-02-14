@@ -3,13 +3,12 @@ import { Image } from "astro:assets";
 import Base from "@layouts/Base.astro";
 import { markdownify } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
-
-const homepage = await getEntryBySlug("homepage", "index");
-const { banner } = homepage.data;
-
 import Service from "../layouts/partials/Service.astro";
 import Logos from "../layouts/partials/Logos.astro";
 import Agenda from "../layouts/partials/Agenda.astro";
+
+const homepage = await getEntryBySlug("homepage", "index");
+const { banner } = homepage.data;
 
 const allImages = await Astro.glob("../content/gallery/*");
 const filteredImages = allImages.filter(
@@ -97,4 +96,5 @@ export const prerender = true;
       </div>
     </div>
   </section>
+
 </Base>
