@@ -11,7 +11,10 @@ import Service from "../layouts/partials/Service.astro";
 import Logos from "../layouts/partials/Logos.astro";
 import Agenda from "../layouts/partials/Agenda.astro";
 
-const gallery = await Astro.glob("../../public/images/gallery/*");
+const allImages = await Astro.glob("../content/gallery/*");
+const filteredImages = allImages.filter(
+  (data) => data.frontmatter.draft == false
+);
 
 export const prerender = true;
 ---
@@ -28,17 +31,6 @@ export const prerender = true;
               <p class="mt-4" set:html={markdownify(banner.content)} />
             )
           }
-
-          <!-- {
-            banner?.button?.enable && (
-              <a
-                class="btn btn-primary mt-4 py-[14px]"
-                href={banner.button.link}
-              >
-                {banner.button.label}
-              </a>
-            )
-          } -->
 
           {
             banner?.image && (
@@ -80,13 +72,13 @@ export const prerender = true;
           <div class="section row pb-0">
             <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
               {
-                gallery.slice(0, 4).map((image: any) => {
+                filteredImages.slice(0, 4).map((data: any) => {
                   return (
                     <div>
                       <img
                         class="h-52 w-52 rounded-lg object-cover"
-                        src={image.default.src}
-                        alt="p"
+                        src={data.frontmatter.image}
+                        alt={data.frontmatter.title}
                       />
                     </div>
                   );

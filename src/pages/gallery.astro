@@ -1,18 +1,11 @@
 ---
-import Base from "@layouts/Base.astro";
-// import { getEntryBySlug } from "astro:content";
-// const entry = await getEntryBySlug("gallery", "index");
-// const { title, description, info } = entry?.data;
-// const { contents } = entry?.data;
-// const gallery = await Astro.glob("../../public/images/gallery/*");
 export const prerender = true;
-
-// const removeDrafts = removeIndex.filter((data: any) => !data.data.draft);
+import Base from "@layouts/Base.astro";
 const allImages = await Astro.glob("../content/gallery/*");
-const filteredImages = allImages.filter((data) => data.frontmatter.draft == false
+const filteredImages = allImages.filter(
+  (data) => data.frontmatter.draft == false
 );
 
-console.log(filteredImages);
 ---
 
 <Base title="Gallery">
@@ -20,25 +13,25 @@ console.log(filteredImages);
     <div class="container">
       <h1 class="text-center font-normal">Gallery</h1>
       <div class="section row pb-0">
-        <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
-          {
+        {
+          filteredImages.length != 0 ? (
             filteredImages.map((image) => {
               return (
-                <div>
+                <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
                   <img
                     class="h-80 w-80 rounded-lg object-cover"
-                    src={
-                      image.frontmatter.image
-                        ? image.frontmatter.image
-                        : "images"
-                    }
+                    src={image.frontmatter.image}
                     alt={image.frontmatter.title}
                   />
                 </div>
               );
             })
-          }
-        </div>
+          ) : (
+            <div class="my-20 flex items-center justify-center">
+              <h1>No images</h1>
+            </div>
+          )
+        }
       </div>
     </div>
   </section>
