@@ -5,7 +5,6 @@ const allImages = await Astro.glob("../content/gallery/*");
 const filteredImages = allImages.filter(
   (data) => data.frontmatter.draft == false
 );
-
 ---
 
 <Base title="Gallery">
@@ -13,17 +12,16 @@ const filteredImages = allImages.filter(
     <div class="container">
       <h1 class="text-center font-normal">Gallery</h1>
       <div class="section row pb-0">
+        <div class="grid grid-cols-2 gap-4 md:grid-cols-3"></div>
         {
           filteredImages.length != 0 ? (
             filteredImages.map((image) => {
               return (
-                <div class="grid grid-cols-2 gap-4 md:grid-cols-3">
-                  <img
-                    class="h-80 w-80 rounded-lg object-cover"
-                    src={image.frontmatter.image}
-                    alt={image.frontmatter.title}
-                  />
-                </div>
+                <img
+                  class="h-80 w-80 rounded-lg object-cover"
+                  src={image.frontmatter.image}
+                  alt={image.frontmatter.title}
+                />
               );
             })
           ) : (
