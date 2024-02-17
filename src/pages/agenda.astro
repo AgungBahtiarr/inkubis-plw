@@ -7,6 +7,10 @@ import AgendaItem from "../layouts/components/AgendaItem.astro";
 const entry = await getEntryBySlug("agenda", "index");
 const { content } = entry.data;
 export const prerender = true;
+
+const agendas = await Astro.glob("../content/agenda/*.md");
+
+console.log(agendas);
 ---
 
 <Base title="Agenda">
