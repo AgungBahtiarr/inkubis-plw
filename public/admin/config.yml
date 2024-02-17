@@ -38,13 +38,13 @@ collections:
       - {label: "Draft", name: "draft", widget: "boolean"}
 
 
-  - name: "title"
+  - name: "agenda"
     label: "Agenda" # Used in the UI
     folder: "src/content/agenda" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title", name: "agenda", widget: "string"}
       - {label: "Date", name: "date", widget: "date"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Implementation Date", name: "implementationDate", widget: "string"}
