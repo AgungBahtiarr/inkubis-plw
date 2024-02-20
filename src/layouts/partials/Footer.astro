@@ -5,6 +5,7 @@ import social from "@config/social.json";
 import { MapPin, Phone, Mail } from "lucide-astro";
 
 import { markdownify } from "@lib/utils/textConverter";
+import Logo from "@layouts/components/Logo.astro";
 
 const { footer_content, copyright } = config.params;
 ---
@@ -17,13 +18,13 @@ const { footer_content, copyright } = config.params;
         <h2 class="h4">Service</h2>
         <ul class="mt-6">
           <li class="mb-1">
-            <a href="" rel="">Lorem ipsum</a>
+            <a href="#" rel="">Lorem ipsum</a>
           </li>
           <li class="mb-1">
-            <a href="" rel="">Lorem ipsum</a>
+            <a href="#" rel="">Lorem ipsum</a>
           </li>
           <li class="mb-1">
-            <a href="" rel="">Lorem ipsum</a>
+            <a href="#" rel="">Lorem ipsum</a>
           </li>
         </ul>
       </div>
@@ -34,9 +35,7 @@ const { footer_content, copyright } = config.params;
           <li class="mb-1 hover:font-bold">
             <a href="/blog" rel="">Blog</a>
           </li>
-          <li
-            class="mb-1 hover:font-bold"
-          >
+          <li class="mb-1 hover:font-bold">
             <a href="/gallery" rel="">Gallery</a>
           </li>
           <li class="mb-1 hover:font-bold">
@@ -53,22 +52,25 @@ const { footer_content, copyright } = config.params;
         <ul class="mt-6 flex flex-col gap-2">
           <li class="mb-1 flex gap-2">
             <MapPin />
-            <a href="" rel="">Location</a>
+            <a class="max-w-sm" href="#" rel="">Politeknik Negeri Banyuwangi</a>
           </li>
           <li class="mb-1 flex gap-2">
             <Phone />
-            <a href="" rel="">Phone number</a>
+            <a href="#" rel="">(0333) 636780</a>
           </li>
           <li class="mb-1 flex gap-2">
             <Mail />
-            <a href="" rel="">Mail</a>
+            <a href="#" rel="">inkubistek@poliwangi.ac.id</a>
           </li>
         </ul>
       </div>
 
       {/* social icons */}
       <div class="md-12 sm:col-6 lg:col-3">
-        <h3>UPT Inkubis</h3>
+        <div class="flex items-center gap-4">
+          <Logo />
+          <h3>UPT KIBT</h3>
+        </div>
         <p class="mb-6 mt-3" set:html={markdownify(footer_content)} />
         <Social source={social} className="social-icons mb-8" />
       </div>
