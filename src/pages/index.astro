@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import Base from "@layouts/Base.astro";
-import { markdownify } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 import Service from "../layouts/partials/Service.astro";
 import Logos from "../layouts/partials/Logos.astro";
@@ -18,7 +17,7 @@ const filteredImages = allImages.filter(
 export const prerender = true;
 ---
 
-<Base>
+<Base title="Home">
   <!-- banner -->
   <section class="section pb-[50px]">
     <div class="container">
@@ -53,7 +52,7 @@ export const prerender = true;
 
   <Service />
   <!-- Agenda -->
-  
+
   <Agenda />
   <!-- Gallery -->
 
