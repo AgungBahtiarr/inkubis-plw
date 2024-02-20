@@ -11,7 +11,7 @@ const { teams } = entry.data;
 
 <Base title="About">
   <section class="section mx-8">
-    <h1 class="text-center font-semibold">About Us</h1>
+    <h1 class="text-center font-semibold">Tentang kami</h1>
     <div class="mx-auto flex justify-center">
       <p class="mt-4 w-[800px] text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc volutpat,
@@ -23,27 +23,37 @@ const { teams } = entry.data;
 
     <div class="mt-8 flex justify-center gap-4">
       <div class="max-w-md rounded-md bg-slate-100 p-4 md:p-8">
-        <h2 class="text-center font-normal">Visi</h2>
+        <h2 class="text-center font-medium">Visi</h2>
         <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
-          augue, non consequat lorem erat vel felis.
+          Meningkatkan inovasi produk unggulan di bidang terapan dari hasil
+          hilirisasi riset menuju entrepeneur mandiri.
         </p>
       </div>
       <div class="max-w-md rounded-md bg-slate-100 p-4 md:p-8">
-        <h2 class="text-center font-normal">Misi</h2>
-        <p class="mt-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          volutpat, turpis vehicula ultrices placerat, urna ligula imperdiet
-          augue, non consequat lorem erat vel felis.
-        </p>
+        <h2 class="text-center font-medium">Misi</h2>
+        <ul>
+          <li>
+            1. Meningkatkan peran tenant, civitas akademika, dan alumni melalui
+            inovasi produk unggulan untuk mengembangkan iptek dan bisnis bagi
+            masyarakat.
+          </li>
+          <li>
+            2. Menumbuhkembangkan jiwa kewirausahaan civitas akademika dan
+            alumni.
+          </li>
+          <li>
+            3. Mengembangkan hasil hilirisasi riset dan pengabdian kepada
+            masyarakat.
+          </li>
+          <li>4. Memanajemen produk hasil riset berbasis tekulogi.</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section class="mx-8 my-12">
     <div>
-      <h1 class="text-center font-semibold">Our Teams</h1>
+      <h1 class="text-center font-semibold">Team kami</h1>
       <div class="flex justify-center">
         <p class="mb-5 mt-4 w-[800px] text-center">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
@@ -54,17 +64,15 @@ const { teams } = entry.data;
       </div>
     </div>
 
-    <div class="mt-4 flex flex-row flex-wrap justify-center gap-6">
+    <div class="mx-auto mt-4 flex lg:w-[750px] flex-row flex-wrap justify-center gap-6">
       {
         teams.map((item: any) => {
           return (
             <ProfileCard
               image={item.profile.images}
               name={item.profile.name}
-              position={item.profile.position}
-              linkLinkedIn={item.profile.linkLinkedIn}
-              linkInstagram={item.profile.linkInstagram}
-              linkTwitter={item.profile.linkTwitter}
+              position1={item.profile.position1}
+              position2={item.profile.position2}
             />
           );
         })

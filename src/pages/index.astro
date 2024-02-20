@@ -25,11 +25,11 @@ export const prerender = true;
       <div class="row text-center">
         <div class="mx-auto lg:col-10">
           <h1 class="font-primary font-semibold">{banner?.title}</h1>
-          {
+          <!-- {
             banner?.content && (
               <p class="mt-4" set:html={markdownify(banner.content)} />
             )
-          }
+          } -->
 
           {
             banner?.image && (
@@ -53,6 +53,7 @@ export const prerender = true;
 
   <Service />
   <!-- Agenda -->
+  
   <Agenda />
   <!-- Gallery -->
 
@@ -60,12 +61,12 @@ export const prerender = true;
     <div class="container">
       <div class="row text-center">
         <div class="mx-auto lg:col-10">
-          <h1 class="font-semibold">Our Gallery</h1>
+          <h1 class="font-semibold">Galeri</h1>
           <p class="mb-2 mt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-            alias quidem eius, sunt possimus ipsa placeat voluptate ut aliquid
-            voluptatem esse voluptates accusamus hic reprehenderit adipisci
-            magni laborum, fuga nisi?
+            Jelajahi galeri kami dan temukan berbagai gambar dan video menarik
+            yang menceritakan kisah dan menghadirkan nuansa dari apa yang kami
+            tawarkan. Rasakan atmosfer, temukan detail yang memukau, dan biarkan
+            diri Anda
           </p>
 
           <div class="section row pb-0">
@@ -96,5 +97,4 @@ export const prerender = true;
       </div>
     </div>
   </section>
-
 </Base>
