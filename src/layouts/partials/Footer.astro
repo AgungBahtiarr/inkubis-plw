@@ -14,7 +14,7 @@ const { footer_content, copyright } = config.params;
   <div class="container">
     {/* footer menu */}
     <div class="row">
-      <div class="mb-12 sm:col-6 lg:col-3">
+      <div class=" mt-4 mb-12 sm:col-6 lg:col-3">
         <h2 class="h4">Service</h2>
         <ul class="mt-6">
           <li class="mb-1">
@@ -29,7 +29,7 @@ const { footer_content, copyright } = config.params;
         </ul>
       </div>
 
-      <div class="mb-12 sm:col-6 lg:col-3">
+      <div class="mb-12 mt-4 sm:col-6 lg:col-3">
         <h2 class="h4">Features</h2>
         <ul class="mt-6">
           <li class="mb-1 hover:font-bold">
@@ -47,7 +47,7 @@ const { footer_content, copyright } = config.params;
         </ul>
       </div>
 
-      <div class="mb-12 sm:col-6 lg:col-3">
+      <div class="mb-12 mt-4 sm:col-6 lg:col-3">
         <h2 class="h4">Contact</h2>
         <ul class="mt-6 flex flex-col gap-2">
           <li class="mb-1 flex gap-2">
@@ -71,7 +71,10 @@ const { footer_content, copyright } = config.params;
           <Logo />
           <h3>UPT KIBT</h3>
         </div>
-        <p class="mb-6 mt-3" set:html={markdownify(footer_content)} />
+        <p class="mb-6 mt-3">
+          Unit layanan pelatihan bidang kewirausahaan rekruitement tenant dan
+          inkubasi tenant
+        </p>
         <Social source={social} className="social-icons mb-8" />
       </div>
     </div>

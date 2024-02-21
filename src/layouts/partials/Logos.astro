@@ -1,75 +1,38 @@
+---
+import { getEntryBySlug } from "astro:content";
+import { Image } from "astro:assets";
+
+const entry = await getEntryBySlug("homepage", "index");
+const images = entry.data.tenant;
+---
+
 <section class="section pb-[50px]">
-    <div class="container">
-      <div class="row text-center">
-        <div class="mx-auto lg:col-10">
-          <h1 class="font-primary font-semibold">Our Graduate Startups</h1>
+  <div class="container">
+    <div class="row text-center">
+      <div class="mx-auto lg:col-10">
+        <h1 class="font-primary font-semibold">Tenant kami</h1>
 
-          <p class="mb-8 mt-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-            alias quidem eius, sunt possimus ipsa placeat voluptate ut aliquid
-            voluptatem esse voluptates accusamus hic reprehenderit adipisci
-            magni laborum, fuga nisi?
-          </p>
+        <p class="mb-8 mt-4">
+          UPT KIBT Poliwangi telah banyak melakukan kerja sama dengan para
+          tenant yang ada di banyuwangi
+        </p>
 
-          <div
-            class="flex flex-row flex-wrap items-center justify-center gap-8"
-          >
-            <div
-              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
-            >
-              <img
-                src="https://cdn.devdojo.com/tails/images/disney-plus.svg"
-                alt="Disney Plus"
-                class="block h-12 object-contain"
-              />
-            </div>
-            <div
-              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
-            >
-              <img
-                src="https://cdn.devdojo.com/tails/images/google.svg"
-                alt="Google"
-                class="block h-9 object-contain"
-              />
-            </div>
-            <div
-              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
-            >
-              <img
-                src="https://cdn.devdojo.com/tails/images/hubspot.svg"
-                alt="Hubspot"
-                class="block h-9 object-contain"
-              />
-            </div>
-            <div
-              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-3 xl:col-span-2"
-            >
-              <img
-                src="https://cdn.devdojo.com/tails/images/youtube.svg"
-                alt="Youtube"
-                class="block h-7 object-contain lg:h-8"
-              />
-            </div>
-            <div
-              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-6 xl:col-span-2"
-            >
-              <img
-                src="https://cdn.devdojo.com/tails/images/slack.svg"
-                alt="Slack"
-                class="block h-9 object-contain"
-              />
-            </div>
-            <div
-              class="col-span-6 flex items-center justify-center sm:col-span-4 md:col-span-6 xl:col-span-2"
-            >
-              <img
-                src="https://cdn.devdojo.com/tails/images/shopify.svg"
-                alt="Shopify"
-                class="block h-9 object-contain"
-              />
-            </div>
-          </div>
+        <div class="flex flex-row flex-wrap items-center justify-center gap-8">
+          {
+            images.map((image: any) => {
+              return (
+                <Image
+                  src={image}
+                  width={100}
+                  height={100}
+                  alt="Disney Plus"
+                  class="h-24 rounded-lg object-contain p-4 shadow-lg"
+                />
+              );
+            })
+          }
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

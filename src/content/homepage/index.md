@@ -7,4 +7,18 @@ banner:
     label: "Contact Us"
     link: "/contact"
     enable: true
+
+tenant:
+  - /tenantlogo/campaka.jpg
+  - /tenantlogo/andinipuremilk.jpg
+  - /tenantlogo/creativelabs.jpg
+  - /tenantlogo/dapurutie.jpg
+  - /tenantlogo/dinastifood.jpg
+  - /tenantlogo/djawahir.jpg
+  - /tenantlogo/leafcoffee.jpg
+  - /tenantlogo/lemonto.jpg
+  - /tenantlogo/mariosablon.jpg
+  - /tenantlogo/philos.jpg
+  - /tenantlogo/webmedia.png
+
 ---
