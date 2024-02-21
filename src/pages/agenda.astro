@@ -58,7 +58,6 @@ const getMonth = (number) => {
       <ol class="relative mt-5 border-s border-gray-200 dark:border-gray-700">
         {
           sortedAgendas.map((agenda: any) => {
-            console.log(new Date(agenda.frontmatter.date).getMonth());
             return (
               <AgendaItem
                 date={`${getMonth(
