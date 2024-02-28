@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets";
+export const prerender = true;
+import Base from "../../layouts/Base.astro";
+import { number } from "astro/zod";
+
+export async function getStaticPaths({ paginate }) {
+  const allImages = await Astro.glob("../../content/gallery/*");
+  const filteredImages = allImages.filter(
+    (data) => data.frontmatter.draft == false
+  );
+  return paginate(filteredImages, { pageSize: 9 });
+}
+const { page } = Astro.props;
+const length = page.lastPage;
+let paginationList: number[] = [];
+
+for (let index = 0; index < length; index++) {
+  paginationList.push(index + 1);
+}
+---
+
+<Base title="Gallery">
+  <section class="section">
+    <div class="container">
+      <h1 class="text-center font-semibold">Galeri</h1>
+      <p class="mx-auto mt-6 text-center">
+        Jelajahi galeri kami dan temukan berbagai gambar dan video menarik yang
+        menceritakan kisah dan menghadirkan nuansa dari apa yang kami tawarkan.
+        Rasakan atmosfer, temukan detail yang memukau, dan biarkan diri Anda
+      </p>
+      <div class="section row pb-0">
+        <div
+          class="flex flex-col flex-wrap items-center md:grid md:grid-cols-3"
+        >
+          {
+            page.data.map != 0 ? (
+              page.data.map((image) => {
+                return (
+                  <Image
+                    class="w-80 rounded-lg object-cover"
+                    src={image.frontmatter.image}
+                    alt={image.frontmatter.title}
+                    width={1000}
+                    height={1000}
+                  />
+                );
+              })
+            ) : (
+              <div class="my-20 flex items-center justify-center">
+                <h1>No images</h1>
+              </div>
+            )
+          }
+        </div>
+        <div class="my-12 flex justify-center">
+          <nav aria-label="Page navigation example">
+            <ul class="inline-flex -space-x-px text-sm">
+              <li>
+                <a
+                  href={page.url.prev}
+                  class="ms-0 flex h-8 items-center justify-center rounded-s-lg border border-e-0 border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >Prev</a
+                >
+              </li>
+              {
+                paginationList.map((number) => {
+                  return (
+                    <li>
+                      <a
+                        href=`/test/${number}`
+                        class="flex h-8 items-center justify-center border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                      >
+                      {number}
+                      </a>
+                    </li>
+                  );
+                })
+              }
+
+              <li>
+                <a
+                  href={page.url.next}
+                  class="flex h-8 items-center justify-center rounded-e-lg border border-gray-300 bg-white px-3 leading-tight text-gray-500 hover:bg-gray-100 hover:text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >Next</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
