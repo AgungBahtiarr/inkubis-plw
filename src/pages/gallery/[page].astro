@@ -2,18 +2,17 @@
 import { Image } from "astro:assets";
 export const prerender = true;
 import Base from "../../layouts/Base.astro";
-import { number } from "astro/zod";
 
 export async function getStaticPaths({ paginate }) {
   const allImages = await Astro.glob("../../content/gallery/*");
   const filteredImages = allImages.filter(
-    (data) => data.frontmatter.draft == false
+    (data) => data.frontmatter.draft === false
   );
   return paginate(filteredImages, { pageSize: 9 });
 }
 const { page } = Astro.props;
 const length = page.lastPage;
-let paginationList: number[] = [];
+const paginationList: number[] = [];
 
 for (let index = 0; index < length; index++) {
   paginationList.push(index + 1);

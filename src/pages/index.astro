@@ -11,7 +11,7 @@ const { banner } = homepage.data;
 
 const allImages = await Astro.glob("../content/gallery/*");
 const filteredImages = allImages.filter(
-  (data) => data.frontmatter.draft == false
+  (data) => data.frontmatter.draft === false
 );
 
 export const prerender = true;

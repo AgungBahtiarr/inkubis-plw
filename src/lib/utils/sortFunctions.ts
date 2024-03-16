@@ -1,6 +1,8 @@
 // sort by date
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export const sortByDate = (array: any[]) => {
   const sortedArray = array.sort(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     (a:any, b:any) =>
       new Date(b.data.date && b.data.date) -
       new Date(a.data.date && a.data.date) 
@@ -9,11 +11,14 @@ export const sortByDate = (array: any[]) => {
 };
 
 // sort product by weight
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export const sortByWeight = (array: any[]) => {
   const withWeight = array.filter(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     (item: { data: { weight: any } }) => item.data.weight
   );
   const withoutWeight = array.filter(
+    // biome-ignore lint/suspicious/noExplicitAny: <explanation>
     (item: { data: { weight: any } }) => !item.data.weight
   );
   const sortedWeightedArray = withWeight.sort(

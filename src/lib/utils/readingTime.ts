@@ -5,14 +5,14 @@ const readingTime = (content: string) => {
   let images = 0;
   const regex = /\w/;
 
-  let words = content.split(" ").filter((word) => {
+  const words = content.split(" ").filter((word) => {
     if (word.includes("<img")) {
       images += 1;
     }
     return regex.test(word);
   }).length;
 
-  let imageAdjust = images * 4;
+  const imageAdjust = images * 4;
   let imageSecs = 0;
   let imageFactor = 12;
 
@@ -28,12 +28,14 @@ const readingTime = (content: string) => {
 
   if (minutes < 10) {
     if (minutes < 2) {
-      return "0" + minutes + ` Min read`;
+      return `0${minutes} Min read`;
+    // biome-ignore lint/style/noUselessElse: <explanation>
     } else {
-      return "0" + minutes + ` Mins read`;
+      return `0${minutes} Mins read`;
     }
+  // biome-ignore lint/style/noUselessElse: <explanation>
   } else {
-    return minutes + ` Mins read`;
+    return `${minutes} Mins read`;
   }
 };
 
