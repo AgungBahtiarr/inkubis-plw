@@ -7,7 +7,7 @@
         position1: Ketua Team
         position2: 
     - profile:
-        images: /images/teams/person.jpg
+        images: /images/teams/reni.png
         name: Reni Nur Jannah S.ST.,M.Par
         position1: Anggota
         position2: (Inovasi Produk)
