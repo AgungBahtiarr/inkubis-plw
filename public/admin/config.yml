@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-  repo: AgungBahtiarr/inkubis-plw
-  base_url: https://kwu-inkubistek.poliwangi.ac.id/
+  # repo: AgungBahtiarr/inkubis-plw
+  # base_url: https://kwu-inkubistek.poliwangi.ac.id/
 # publish_mode: editorial-workflow
 
 media_folder: "public/images"

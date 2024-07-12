@@ -1,10 +1,10 @@
 services:
   cms-backend:
-    image: ${CMS_BACKEND_IMAGE}
+    image: 'ghcr.io/njfamirm/decap-cms-github-backend:latest'
 
     restart: unless-stopped
 
     environment:
-      - OAUTH_GITHUB_CLIENT_SECRET=${OAUTH_GITHUB_CLIENT_SECRET}
-      - OAUTH_GITHUB_CLIENT_ID=${OAUTH_GITHUB_CLIENT_ID}
-      - ALWATR_DEBUG=${CMS_BACKEND_DEBUG-}
+      - OAUTH_GITHUB_CLIENT_SECRET='Ov23liwuWAzat6xSDN1o'
+      - OAUTH_GITHUB_CLIENT_ID='253e4989e36f7d876f6127123f24072073a445d7'
+      # - ALWATR_DEBUG=${CMS_BACKEND_DEBUG-}

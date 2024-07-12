@@ -6,7 +6,7 @@ import AutoImport from "astro-auto-import";
 import { defineConfig } from "astro/config";
 import remarkToc from "remark-toc";
 import config from "./src/config/config.json";
-// import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/serverless";
 import netlify from "@astrojs/netlify";
 import remarkCollapse from "remark-collapse";
 
@@ -47,5 +47,5 @@ export default defineConfig({
     extendDefaultPlugins: true,
   },
   output: "server",
-  adapter: netlify(),
+  adapter: vercel(),
 });
