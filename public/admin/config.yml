@@ -1,8 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
-  # repo: AgungBahtiarr/inkubis-plw
-  base_url: https://inkubis-plw.vercel.app/
+  repo: AgungBahtiarr/inkubis-plw
+  # base_url:
 # publish_mode: editorial-workflow
 
 media_folder: "public/images"
