@@ -2,7 +2,7 @@ backend:
   name: github
   branch: main
   repo: AgungBahtiarr/inkubis-plw
-  base_url: https://inkubis-plw.vercel.app
+  base_url: https://inkubis-plw.vercel.app/api/callback
 # publish_mode: editorial-workflow
 
 media_folder: "public/images"
