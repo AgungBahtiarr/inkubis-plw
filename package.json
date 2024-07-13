@@ -18,6 +18,7 @@
     "@unpic/astro": "^0.0.43",
     "astro": "latest",
     "astro-auto-import": "^0.3.2",
+    "astro-decap-cms-oauth": "^0.3.1",
     "date-fns": "^2.30.0",
     "date-fns-tz": "^2.0.1",
     "fuse.js": "^6.6.2",
