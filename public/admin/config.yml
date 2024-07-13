@@ -3,7 +3,7 @@ backend:
   branch: main
   repo: AgungBahtiarr/inkubis-plw
   base_url: https://inkubis-plw.vercel.app/
-  auth_endpoint: api/callback
+  auth_endpoint: oauth # the oauth route provided by the integration
 
 # publish_mode: editorial-workflow
 
