@@ -7,13 +7,13 @@ import { MapPin, Phone, Mail } from "lucide-astro";
 import { markdownify } from "@lib/utils/textConverter";
 import Logo from "@layouts/components/Logo.astro";
 
-const {copyright } = config.params;
+const { copyright } = config.params;
 ---
 
 <footer class="section bg-theme-light pb-0">
   <div class="container">
     {/* footer menu */}
-    <div class="flex justify-between">
+    <div class="flex flex-col justify-between md:flex-row">
       <!-- <div class=" mt-4 mb-12 sm:col-6 lg:col-3"> -->
       <!--   <h2 class="h4">Service</h2> -->
       <!--   <ul class="mt-6"> -->
@@ -36,7 +36,7 @@ const {copyright } = config.params;
             <a href="/blog" rel="">Blog</a>
           </li>
           <li class="mb-1 hover:font-bold">
-            <a href="/gallery" rel="">Gallery</a>
+            <a href="/gallery/1" rel="">Gallery</a>
           </li>
           <li class="mb-1 hover:font-bold">
             <a href="/agenda" rel="">Agenda</a>
