@@ -2,10 +2,12 @@ backend:
   name: git-gateway
   branch: main
   repo: AgungBahtiarr/inkubis-plw
-  base_url: https://inkubis-plw.vercel.app/
+  # base_url: https://inkubis-plw.vercel.app/
   #  auth_endpoint: oauth # the oauth route provided by the integration
 
 # publish_mode: editorial-workflow
+
+# https://kwu-inkubistek.poliwangi.ac.id/oauth/callback
 
 media_folder: "public/images"
 public_folder: "/images"
