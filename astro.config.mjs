@@ -29,7 +29,7 @@ export default defineConfig({
       imports: ["@shortcodes/Button"],
     }),
     mdx(),
-    decapCmsOauth(),
+    // decapCmsOauth(),
   ],
   markdown: {
     remarkPlugins: [

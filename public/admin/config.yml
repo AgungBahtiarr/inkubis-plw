@@ -1,15 +1,14 @@
 backend:
-  name: github
+  name: git-gateway
   branch: main
   repo: AgungBahtiarr/inkubis-plw
   base_url: https://inkubis-plw.vercel.app/
-  auth_endpoint: oauth # the oauth route provided by the integration
+  #  auth_endpoint: oauth # the oauth route provided by the integration
 
 # publish_mode: editorial-workflow
 
 media_folder: "public/images"
 public_folder: "/images"
-
 
 collections:
   - name: "title"
@@ -18,12 +17,12 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
-      - {label: "Draft", name: "draft", widget: "boolean"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "image"
     label: "Gallery" # Used in the UI
@@ -36,10 +35,9 @@ collections:
     media_folder: "/public/images/gallery"
     public_folder: "/images/gallery"
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Draft", name: "draft", widget: "boolean"}
-
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
 
   - name: "agenda"
     label: "Agenda" # Used in the UI
@@ -47,9 +45,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{agenda}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "agenda", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Draft", name: "draft", widget: "boolean"}
-
-
+      - { label: "Title", name: "agenda", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Draft", name: "draft", widget: "boolean" }
