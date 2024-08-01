@@ -1,12 +1,10 @@
 ---
-title: Career and Entrepreneur Week 2024 telah resmi dibuka!
+title: Career and Entrepreneur Week 2024 Poliwangi Resmi Dibuka! 🎉
 description: Career and Entrepreneur Week 2024 telah resmi dibuka!
 date: 2024-08-01T14:40:00.000Z
 image: /images/screenshot-from-2024-08-01-14-34-11.png
 draft: false
 ---
-## Career and Entrepreneur Week 2024 Poliwangi Resmi Dibuka! 🎉
-
 ## Membangun Ekosistem Wirausaha dan Karir Mahasiswa
 
 Kabar gembira bagi seluruh mahasiswa dan alumni Politeknik Negeri Banyuwangi (Poliwangi)! Career and Entrepreneur Week 2024 telah resmi dibuka, menandai dimulainya serangkaian kegiatan inspiratif dan edukatif untuk mengembangkan potensi wirausaha dan karir.
