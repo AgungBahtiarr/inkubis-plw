@@ -9,6 +9,7 @@ banner:
     enable: true
 
 tenant:
+  - /tenantlogo/aibi.png
   - /tenantlogo/campaka.jpg
   - /tenantlogo/andinipuremilk.jpg
   - /tenantlogo/creativelabs.jpg
@@ -20,5 +21,4 @@ tenant:
   - /tenantlogo/mariosablon.jpg
   - /tenantlogo/philos.jpg
   - /tenantlogo/webmedia.png
-
 ---

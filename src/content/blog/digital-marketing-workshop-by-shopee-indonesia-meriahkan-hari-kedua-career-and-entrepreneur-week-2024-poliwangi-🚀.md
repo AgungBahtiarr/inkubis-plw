@@ -1,6 +1,5 @@
 ---
-title: Digital Marketing Workshop by Shopee Indonesia Meriahkan Hari Kedua
-  Career and Entrepreneur Week 2024 Poliwangi 🚀
+title: Digital Marketing Workshop by Shopee Indonesia Poliwangi 🚀
 description: Digital Marketing Workshop by Shopee Indonesia Meriahkan Hari Kedua
   Career and Entrepreneur Week 2024 Poliwangi 🚀
 date: 2024-08-01T14:57:00.000Z

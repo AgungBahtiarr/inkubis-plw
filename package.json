@@ -26,7 +26,7 @@
     "gray-matter": "^4.0.3",
     "lucide-astro": "^0.323.0",
     "marked": "^5.1.2",
-    "postcss": "^8.4.39",
+    "postcss": "^8.4.40",
     "prettier": "^2.8.8",
     "prettier-plugin-astro": "^0.8.1",
     "prettier-plugin-tailwindcss": "^0.2.8",
@@ -40,7 +40,7 @@
     "sharp": "^0.33.4",
     "swiper": "^9.4.1",
     "tailwind-bootstrap-grid": "^5.1.0",
-    "tailwindcss": "^3.4.6"
+    "tailwindcss": "^3.4.7"
   },
   "description": "Inkubis web",
   "scripts": {
